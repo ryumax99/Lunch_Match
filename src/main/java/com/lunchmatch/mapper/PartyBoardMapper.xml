@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lunchmatch.mapper.PartyBoardMapper">
+
+    <insert id="insert" parameterType="com.lunchmatch.domain.PartyBoardVO">
+        INSERT INTO party_board (
+            writer_id, title, content, location_name,
+            latitude, longitude, food_category,
+            gender_limit, party_time
+        ) VALUES (
+                     #{writerId}, #{title}, #{content}, #{locationName},
+                     #{latitude}, #{longitude}, #{foodCategory},
+                     #{genderLimit}, #{partyTime}
+                 )
+    </insert>
+
+</mapper>
