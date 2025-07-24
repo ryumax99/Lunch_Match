@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>파티 모집 글쓰기</title>
+</head>
+<body>
+<h1>파티 모집 글쓰기</h1>
+
+<form method="post" action="/party/write">
+    <label>제목: <input type="text" name="title" required /></label><br/><br/>
+
+    <label>내용:<br/>
+        <textarea name="content" rows="5" cols="40" required></textarea>
+    </label><br/><br/>
+
+    <label>장소: <input type="text" name="locationName" required /></label><br/><br/>
+
+    <label>카테고리:
+        <select name="foodCategory" required>
+            <option value="한식">한식</option>
+            <option value="중식">중식</option>
+            <option value="일식">일식</option>
+            <option value="양식">양식</option>
+            <option value="기타">기타</option>
+        </select>
+    </label><br/><br/>
+
+    <label>성별 제한:
+        <select name="genderLimit" required>
+            <option value="ALL">상관없음</option>
+            <option value="MALE">남자만</option>
+            <option value="FEMALE">여자만</option>
+        </select>
+    </label><br/><br/>
+
+    <label>모임 시간:
+        <input type="datetime-local" name="partyTime" required />
+    </label><br/><br/>
+
+    <button type="submit">등록</button>
+</form>
+</body>
+</html>
